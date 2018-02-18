@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gini Index</title>
+    <script type="text/javascript" src="/static/js/d3/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/static/js/d3/d3.tip.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="static/js/chroniton.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3-legend/1.13.0/d3-legend.js"></script>
+
+
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/js/instanciateRadar.js"></script>
+    <script src="/static/js/utilities.js"></script>
+    <script src="/static/js/instanciateHeatMap.js"></script>
+
+    <!-- For countries list -->
+    <!-- optional
+    <link rel="stylesheet" href="css/base.css">
+    -->
+    <link rel="stylesheet" href="/static/css/choices.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/map_style.css">
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <h1>
+        What do you do against income inequality?
+    </h1>
+    <!--
+    <div id="selected_year" style="display: none;">
+    </div>
+    -->
+    <form style="display: none;">
+        <input type="text" id="selected_year">
+    </form>
+    <div class="clearfix">
+        <!-- Display WorldMap-->
+        <div  id="worldMap" class="worldMap">
+            <div id="map"  align="center"> </div>
+            <!--<div id="slider"> </div>-->
+        </div>
+
+        <div id="heatMap_radarChart" class="heatMap_radarChart">
+            <!-- Display HeatMap-->
+            <div  id="chart" class="heatMap">
+                <script type="text/javascript" src="/static/js/circularHeatChart.js"></script>
+                <script>
+                    $('.heatMap').hide();
+                </script>
+            </div>
+
+            <!-- Diplay Radar-->
+            <div class="radarChart">
+                <script src="/static/js/radarChart-v3-updated.js"></script>
+            </div>
+
+            <!-- Display list of indicators and list of countries -->
+            <div class="list_criteria">
+                <div>
+                    <label>Gini index (between 16 and 75)</label>
+
+                    <input type="text" name="from_gini" id="from_gini" class="gini_index" placeholder="From"/>
+                    &nbsp;
+                    <input type="text" name="to_gini" id="to_gini" class="gini_index" placeholder="To"/>
+
+                </div>
+                <div class="criteria">
+                    <label for="list_indicators">List of Indicators</label>
+                    <select class="choices-multiple" name="list_indicators" id="list_indicators" multiple>
+                        {% for indicator in list_indicators %}
+                            <option >{{ indicator|safe }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="criteria">
+                    <label for="list_countries">List of Countries</label>
+                    <select class="choices-multiple" name="list_countries" id="list_countries" multiple>
+                        {% for country in list_countries %}
+                            <option value="{{ country|safe }}">{{ country|safe }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- <button onclick="generate_new_radar()" id="button_selection"> -->
+                <div class="list_btn">
+                    <button id="button_radar" class = "btn">Display Radar</button>
+                    <button id="button_heatmap" class = "btn"> Display HeatMap</button>
+                </div>
+            </div>
+        </div>
+        <div id="slider" style="">
+        </div>
+    </div>
+    <script type="text/javascript" src="/static/js/worldMap.js"></script>
+    <!-- For countries list -->
+    <script src="/static/js/choices.js"></script>
+    <script src="/static/js/instanciateChoices.js"></script>
+</body>
+</html>

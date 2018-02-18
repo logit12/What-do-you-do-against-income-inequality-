@@ -1,0 +1,254 @@
+/* Général */
+body {
+    font-family: system-ui;
+}
+
+h1 {
+    font-family: system-ui;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* RADAR */
+
+.heatMap_radarChart{
+    display:inline-block;
+    font-size: 11px;
+    float:right;
+    margin: 10px 10px 10px 10px;
+    border: 5px solid #00A0B0;
+}
+
+.radarChart {
+    font-weight: 300;
+    fill: #242424;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+    cursor: default;
+    display:inline-block;
+}
+
+.legend {
+    fill: #333333;
+}
+
+.tooltip {
+    fill: #333333;
+}
+
+
+
+/* WorldMap */
+.worldMap{
+    display: inline-block;
+    text-align: center;
+    float: left;
+    margin: 10px 10px 10px 10px;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    border: 5px solid #00A0B0;
+}
+
+/* HEATMAP*/
+
+.heatMap {
+    display: inline-block;
+    text-align: center;
+}
+
+path:hover{
+
+fill:#9b59b6;
+}
+
+.tooltip {
+	background: #eee;
+	box-shadow: 0 0 5px #999999;
+	color: #333;
+	font-size: 12px;
+	left: 130px;
+	padding: 10px;
+	position: absolute;
+	text-align: center;
+	top: 95px;
+	z-index: 10;
+	display: block;
+	opacity: 0;
+}
+
+.title{
+font-size:16px;
+}
+
+/*Other tooltip*/
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+
+/* Gini Index Selection */
+.gini_index {
+    width: 50px;
+    background-color: #f9f9f9;
+    border: 1px solid #DDDDDD;
+    border-radius: 2.5px;
+    padding: 6px;
+}
+
+/* CHOICE LIST */
+
+.list_criteria {
+    display: inline-block;
+    text-align: left;
+    font-weight: normal;
+    vertical-align:top;
+    width: 300px;
+    margin-right: 10px;
+}
+
+
+.criteria {
+    margin-top: 10px;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#country1 {
+  background-color: #1f77b4;
+  border: 1px solid #024a7b;
+}
+
+#country2 {
+  background-color: #ff7f0e;
+  border: 1px solid #b35401;
+}
+
+#country3 {
+  background-color: #2ca02c;
+  border: 1px solid #047704;
+}
+
+#country4 {
+  background-color: #d62728;
+  border: 1px solid #8e0405;
+}
+
+#country5 {
+  background-color: #9467bd;
+  border: 1px solid #5e01b3;
+}
+
+#country6 {
+  background-color: #8c564b;
+  border: 1px solid #673f37;
+}
+
+#country7 {
+  background-color: #e377c2;
+  border: 1px solid #da60b5;
+}
+
+#country8 {
+  background-color: #7f7f7f;
+  border: 1px solid #5a5959;
+}
+
+#country9 {
+  background-color: #bcbd22;
+  border: 1px solid #9d9e13;
+}
+
+#country10 {
+  background-color: #17becf;
+  border: 1px solid #1197a5;
+}
+
+
+/* Actions */
+
+.list_btn {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  display: inline-block;
+  margin : auto;
+  color: #00A0B0;
+  border: 2px #00A0B0 solid;
+  background-color: white;
+}
+
+.btn:hover {
+  /*  cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym46.cur), auto; */
+  background-color: #00A0B0;
+  color: #fff
+}
+
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
